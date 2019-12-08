@@ -1064,7 +1064,7 @@ bones/6/name = "LFootTongue"
 bones/6/parent = 4
 bones/6/rest = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011424, -0.0105979, 0.0666516 )
 bones/6/enabled = true
-bones/6/bound_children = [ NodePath("BoneAttachment") ]
+bones/6/bound_children = [  ]
 bones/7/name = "LeftPantLeg"
 bones/7/parent = 3
 bones/7/rest = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0115255, -0.165193, -0.0228473 )
@@ -1423,7 +1423,7 @@ skin = SubResource( 8 )
 material/0 = null
 
 [node name="BoneAttachment" type="BoneAttachment" parent="Skeleton"]
-transform = Transform( 0.96067, 0.110733, 0.254661, 0.145488, 0.58042, -0.801216, -0.236531, 0.806754, 0.541481, 0.0617201, 0.153956, -0.354771 )
+transform = Transform( 0.971873, -0.169927, 0.163061, 0.231106, 0.554896, -0.799175, 0.0453191, 0.814381, 0.57856, 0.103531, 0.243583, 0.0939441 )
 bone_name = "LFootTongue"
 
 [node name="Area" type="Area" parent="Skeleton/BoneAttachment" groups=[
