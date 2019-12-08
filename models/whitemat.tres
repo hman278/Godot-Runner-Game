@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://shaders/environment.shader" type="Shader" id=1]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/CURVATURE = 5.0
+shader_param/CURVATURE_ACTIVE = true
+shader_param/CURVATURE_DISTANCE = 30.0
+shader_param/color = Plane( 1, 1, 1, 0 )

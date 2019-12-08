@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/player/player_scene.tscn" type="PackedScene" id=2]
+[ext_resource path="res://models/whitemat.tres" type="Material" id=3]
+[ext_resource path="res://scripts/level.gd" type="Script" id=5]
+
+[sub_resource type="PlaneMesh" id=1]
+size = Vector2( 50, 50 )
+subdivide_width = 50
+subdivide_depth = 50
+
+[node name="level" type="Node"]
+script = ExtResource( 5 )
+
+[node name="player_body" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00749791, -0.0948796, 0.064116 )
+
+[node name="spawn_timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="spawn_env_timer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[node name="spawn_obstacle_timer" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[node name="planet" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = ExtResource( 3 )
+[connection signal="timeout" from="spawn_timer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="spawn_env_timer" to="." method="_on_spawn_env_timer_timeout"]
+[connection signal="timeout" from="spawn_obstacle_timer" to="." method="_on_spawn_obstacle_timer_timeout"]
