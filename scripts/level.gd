@@ -66,7 +66,7 @@ func _on_spawn_timer_timeout():
 				random_line_num = randi() % 3
 		prev_rand_line_n = random_line_num
 
-		for i in rand_range(4, 10):
+		for n in rand_range(4, 10):
 		
 			var coin_inst: MeshInstance = coin.instance()
 	
@@ -109,7 +109,7 @@ func _on_spawn_obstacle_timer_timeout():
 				random_line_num = randi() % 3
 		prev_rand_line_n = random_line_num
 
-		var rock_inst: MeshInstance = rock.instance()
+		var rock_inst = rock.instance()
 # warning-ignore:return_value_discarded
 		rock_inst.connect("player_entered", self, "on_player_entered_rock")
 	
